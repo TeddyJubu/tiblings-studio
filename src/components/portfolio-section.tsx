@@ -42,8 +42,8 @@ export function PortfolioSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Portfolio</h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 font-heading">Our Portfolio</h2>
+          <p className="text-lg text-foreground/80 max-w-3xl mx-auto font-body">
             Explore some of our recent projects that showcase our technical and creative capabilities.
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ export function PortfolioSection() {
         >
           {portfolioProjects.map((project, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow">
+              <Card className="overflow-hidden h-full hover:shadow-lg transition-shadow bg-card-foreground/5">
                 <div className="relative h-64 w-full">
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10" />
                   <div className="absolute bottom-4 left-4 z-20">
@@ -76,8 +76,8 @@ export function PortfolioSection() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                  <p className="text-foreground/80 mb-4">{project.description}</p>
+                  <h3 className="text-xl font-bold mb-2 font-heading">{project.title}</h3>
+                  <p className="text-foreground/80 mb-4 font-body">{project.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
@@ -90,7 +90,7 @@ export function PortfolioSection() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="mt-12 text-center"
         >
-          <Button asChild size="lg">
+          <Button asChild size="lg" className="font-body">
             <Link href="#contact">Start Your Project</Link>
           </Button>
         </motion.div>

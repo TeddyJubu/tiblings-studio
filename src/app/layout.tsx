@@ -3,9 +3,14 @@ import "./globals.css";
 import { siteConfig } from "@/lib/constants";
 import localFont from 'next/font/local';
 
+const chillax = localFont({
+  src: '../../public/fonts/Chillax-Variable.woff2',
+  variable: '--font-heading',
+  display: 'swap',
+});
+
 const bagelFatOne = localFont({
   src: '../../public/fonts/BagelFatOne-Regular.ttf',
-  variable: '--font-heading',
   display: 'swap',
 });
 
@@ -47,7 +52,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${bagelFatOne.variable} ${helveticaNeue.variable} antialiased`}
+        className={`${chillax.variable} ${helveticaNeue.variable} antialiased`}
       >
         {children}
       </body>

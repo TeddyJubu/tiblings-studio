@@ -7,8 +7,17 @@ import Link from 'next/link';
 export function HeroSection() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background gradient */}
+      {/* Background gradient and image */}
       <div className="absolute inset-0 bg-gradient-to-b from-background to-background/50 z-0" />
+      <div 
+        className="absolute inset-0 z-0 opacity-20"
+        style={{
+          backgroundImage: 'url(/images/1.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
       
       {/* Animated background shapes */}
       <div className="absolute inset-0 overflow-hidden">
@@ -41,7 +50,7 @@ export function HeroSection() {
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
           <motion.h1 
-            className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent"
+            className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -50,7 +59,7 @@ export function HeroSection() {
           </motion.h1>
           
           <motion.p 
-            className="text-xl md:text-2xl text-foreground/80 mb-8 max-w-2xl"
+            className="text-xl md:text-2xl font-body text-foreground/80 mb-8 max-w-2xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -64,10 +73,10 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            <Button asChild size="lg" className="px-8">
+            <Button asChild size="lg" className="px-8 font-body">
               <Link href="#contact">Start a Project</Link>
             </Button>
-            <Button asChild variant="outline" size="lg" className="px-8">
+            <Button asChild variant="outline" size="lg" className="px-8 font-body">
               <Link href="#portfolio">View Our Work</Link>
             </Button>
           </motion.div>

@@ -40,24 +40,21 @@ export function AboutSection() {
           className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
         >
           <motion.div variants={itemVariants}>
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">About Tiblings Studio</h2>
-            <p className="text-lg text-foreground/80 mb-6">
-              We're Teddy and Tyeba, siblings who combined our complementary skills to create a unique creative and development studio.
+            <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">About Tiblings Studio</h2>
+            <p className="text-lg font-body text-foreground/80 mb-6">
+              We're Teddy and Tyeba, siblings who combined our complementary skills to create a unique creative and development studio. Teddy brings technical expertise in AI integration and development, while Tyeba contributes creative vision through design and branding.
             </p>
-            <p className="text-lg text-foreground/80 mb-6">
-              Teddy brings technical expertise in AI integration and development, while Tyeba contributes creative vision through design and branding.
-            </p>
-            <p className="text-lg text-foreground/80">
-              Together, we leverage the power of AI to enhance (not replace) human creativity, delivering exceptional digital experiences that help businesses thrive in the digital age.
+            <p className="text-lg font-body text-foreground/80">
+              We believe in the power of human creativity enhanced by AI. Our sibling dynamic brings a unique blend of technical and creative thinking to every project, resulting in solutions that are both innovative and practical. Together, we leverage the power of AI to enhance (not replace) human creativity, delivering exceptional digital experiences that help businesses thrive in the digital age.
             </p>
           </motion.div>
 
           <motion.div variants={containerVariants} className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <motion.div variants={itemVariants}>
-              <Card className="h-full">
+              <Card className="h-full bg-card-foreground/5">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Teddy</h3>
-                  <p className="text-foreground/80 mb-4">Technical Lead</p>
+                  <h3 className="text-xl font-heading font-bold mb-2">Teddy</h3>
+                  <p className="font-body text-foreground/80 mb-4">Technical Lead</p>
                   <ul className="space-y-2">
                     <li className="flex items-center">
                       <span className="mr-2">•</span>
@@ -77,10 +74,10 @@ export function AboutSection() {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <Card className="h-full">
+              <Card className="h-full bg-card-foreground/5">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Tyeba</h3>
-                  <p className="text-foreground/80 mb-4">Creative Lead</p>
+                  <h3 className="text-xl font-heading font-bold mb-2">Tyeba</h3>
+                  <p className="font-body text-foreground/80 mb-4">Creative Lead</p>
                   <ul className="space-y-2">
                     <li className="flex items-center">
                       <span className="mr-2">•</span>
@@ -99,16 +96,7 @@ export function AboutSection() {
               </Card>
             </motion.div>
 
-            <motion.div variants={itemVariants} className="sm:col-span-2">
-              <Card>
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">Our Approach</h3>
-                  <p className="text-foreground/80">
-                    We believe in the power of human creativity enhanced by AI. Our sibling dynamic brings a unique blend of technical and creative thinking to every project, resulting in solutions that are both innovative and practical.
-                  </p>
-                </CardContent>
-              </Card>
-            </motion.div>
+
           </motion.div>
         </motion.div>
       </div>

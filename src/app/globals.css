@@ -67,7 +67,7 @@
 :root {
   /* Base */
   --radius: 0.625rem;
-  --font-heading: 'Bagel Fat One', sans-serif;
+  --font-heading: var(--font-heading);
   --font-body: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   
   /* Primary Color Palette */

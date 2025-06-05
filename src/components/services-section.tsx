@@ -55,8 +55,8 @@ export function ServicesSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Services</h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold mb-6">Our Services</h2>
+          <p className="text-lg font-body text-foreground/80 max-w-3xl mx-auto">
             We combine technical expertise and creative vision to deliver comprehensive solutions
             for your digital needs.
           </p>
@@ -69,22 +69,22 @@ export function ServicesSection() {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
           >
-            <motion.h3 
+            <motion.h3
               variants={itemVariants}
-              className="text-2xl font-bold mb-8 text-center md:text-left"
+              className="text-2xl font-heading font-bold mb-8 text-center md:text-left"
             >
               Teddy's Technical Services
             </motion.h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {services.teddy.map((service, index) => (
                 <motion.div key={index} variants={itemVariants}>
-                  <Card className="h-full hover:shadow-md transition-shadow">
+                  <Card className="h-full hover:shadow-md transition-shadow bg-card-foreground/5">
                     <CardContent className="p-6 flex flex-col items-center md:items-start text-center md:text-left">
                       <div className="mb-4 mt-2">
                         {renderIcon(service.icon)}
                       </div>
-                      <h4 className="text-xl font-bold mb-2">{service.title}</h4>
-                      <p className="text-foreground/80">{service.description}</p>
+                      <h4 className="text-xl font-heading font-bold mb-2">{service.title}</h4>
+                      <p className="font-body text-foreground/80">{service.description}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -98,22 +98,22 @@ export function ServicesSection() {
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
           >
-            <motion.h3 
+            <motion.h3
               variants={itemVariants}
-              className="text-2xl font-bold mb-8 text-center md:text-left"
+              className="text-2xl font-heading font-bold mb-8 text-center md:text-left"
             >
               Tyeba's Creative Services
             </motion.h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {services.tyeba.map((service, index) => (
                 <motion.div key={index} variants={itemVariants}>
-                  <Card className="h-full hover:shadow-md transition-shadow">
+                  <Card className="h-full hover:shadow-md transition-shadow bg-card-foreground/5">
                     <CardContent className="p-6 flex flex-col items-center md:items-start text-center md:text-left">
                       <div className="mb-4 mt-2">
                         {renderIcon(service.icon)}
                       </div>
-                      <h4 className="text-xl font-bold mb-2">{service.title}</h4>
-                      <p className="text-foreground/80">{service.description}</p>
+                      <h4 className="text-xl font-heading font-bold mb-2">{service.title}</h4>
+                      <p className="font-body text-foreground/80">{service.description}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
