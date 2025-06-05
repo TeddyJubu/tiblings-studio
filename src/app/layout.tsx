@@ -1,17 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/lib/constants";
+import localFont from 'next/font/local';
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const bagelFatOne = localFont({
+  src: '../../public/fonts/BagelFatOne-Regular.ttf',
+  variable: '--font-heading',
+  display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const helveticaNeue = localFont({
+  src: '../../public/fonts/helvetica-neue-55-cdnfonts/HelveticaNeue-Regular.ttf',
+  variable: '--font-body',
+  display: 'swap',
 });
+
+const geistSans = helveticaNeue; // For backward compatibility
+const geistMono = helveticaNeue; // For backward compatibility
 
 export const metadata: Metadata = {
   title: {
@@ -42,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${bagelFatOne.variable} ${helveticaNeue.variable} antialiased`}
       >
         {children}
       </body>
